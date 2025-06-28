@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio | Innovative Developer{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">DevPort</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-indigo-600 transition">Home</a>
+                <a href="#about" class="nav-link hover:text-indigo-600 transition">About</a>
+                <a href="#skills" class="nav-link hover:text-indigo-600 transition">Skills</a>
+                <a href="#projects" class="nav-link hover:text-indigo-600 transition">Projects</a>
+                <a href="#contact" class="nav-link hover:text-indigo-600 transition">Contact</a>
+                <a href="/login" class="nav-link hover:text-indigo-600 transition">Admin</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 hover:text-indigo-600 transition">Home</a>
+            <a href="#about" class="block py-2 hover:text-indigo-600 transition">About</a>
+            <a href="#skills" class="block py-2 hover:text-indigo-600 transition">Skills</a>
+            <a href="#projects" class="block py-2 hover:text-indigo-600 transition">Projects</a>
+            <a href="#contact" class="block py-2 hover:text-indigo-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    {% block content %}
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">We Are <span class="text-indigo-600">DevTeam</span></h1>
+                <h2 class="text-xl md:text-2xl text-gray-600 mb-8">Digital Solutions Creative Team</h2>
+                <p class="text-gray-600 mb-8 max-w-lg">I build exceptional digital experiences that are fast, accessible, and visually appealing. Let's create something amazing together.</p>
+                <div class="flex space-x-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">Let's Talk</a>
+                    <a href="#projects" class="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition">View Work</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/49df534c-7558-4fa7-9b88-17c5941108c3.png" alt="Team of developers collaborating in a modern office space" class="rounded-lg shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">About Our Team</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e6c7184e-9d70-4560-ac27-b93ff71913ed.png" alt="Diverse team of developers working together in modern office" class="rounded-lg shadow-lg w-full max-w-xs">
+                </div>
+                <div class="w-full md:w-2/3 md:pl-12">
+                    <p class="text-gray-700 mb-6">We are a passionate team of designers and developers with over 5 years of combined experience. Our diverse skill sets allow us to deliver complete digital solutions from conception to deployment.</p>
+                    <p class="text-gray-700 mb-6">Our team approach ensures we combine technical expertise with creative design thinking, delivering products that are not only functional but also provide exceptional user experiences.</p>
+                    <p class="text-gray-700 mb-8">From UI/UX specialists to backend developers, we cover all aspects of modern web and mobile application development.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <span class="bg-indigo-100 text-indigo-600 p-2 rounded-full mr-3">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-semibold">Frontend Development</h3>
+                                <p class="text-sm text-gray-600">Passionate about UI architecture</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="bg-indigo-100 text-indigo-600 p-2 rounded-full mr-3">
+                                <i class="fas fa-paint-brush"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-semibold">UI Design</h3>
+                                <p class="text-sm text-gray-600">Creating beautiful interfaces</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Our Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill items will be populated by JavaScript -->
+            </div>
+            <div class="mt-12">
+                <h3 class="text-xl font-semibold mb-6 text-center">Experience Timeline</h3>
+                <div class="timeline" id="timeline">
+                    <!-- Timeline items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+            <div class="project-filter mb-8 flex justify-center space-x-4">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-container">
+                {% for project in projects %}
+                <div class="project-card rounded-lg overflow-hidden shadow-lg bg-white" data-category="{{ project.category|default('web') }}">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">{{ project.title }}</h3>
+                        <p class="text-gray-600 mb-4">{{ project.description }}</p>
+                        <div class="flex space-x-3">
+                            {% for tech in project.tech %}
+                            <span class="tech-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                        <a href="#" class="mt-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">View Project</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8">
+                    <h3 class="text-xl font-semibold mb-4">Let's work together</h3>
+                    <p class="text-gray-700 mb-6">I'm currently available for freelance work or full-time positions. If you have a project that you want to get started, think you need my help with something, or just want to say hi, feel free to reach out.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <span class="bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-700">contact@devport.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-700">+91 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-700">Kanpur, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition w-full">Send Message</button>
+                    </form>
+                    <div id="form-message" class="mt-4 hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold text-indigo-400">DevPort</h3>
+                    <p class="text-gray-400">Building digital experiences that matter</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+                <p>© 2023 DevPort. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
