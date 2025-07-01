@@ -7,9 +7,13 @@
 <body>
     <h2>Welcome, Admin!</h2>
 
-    <form action="/add" method="POST">
+    <form action="/add_project" method="POST">
         <input type="text" name="title" placeholder="Project Title" required><br><br>
         <textarea name="description" placeholder="Project Description" required></textarea><br><br>
+        <label>Technologies (comma separated):</label>
+        <input type="text" name="tech" placeholder="e.g. Python, Flask, HTML"><br><br>
+        <label>Project Link:</label>
+        <input type="url" name="link" placeholder="https://your-project-link.com"><br><br>
         <button type="submit">Add Project</button>
     </form>
 

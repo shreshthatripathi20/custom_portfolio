@@ -1,6 +1,21 @@
 [
-  {
-    "title": "Weather App",
-    "description": "A simple weather checking website using Flask."
-  }
+    {
+        "title": "Weather App",
+        "description": "A simple weather checking website using Flask."
+    },
+    {
+        "title": "organization",
+        "description": "des",
+        "tech": [
+            ""
+        ]
+    },
+    {
+        "title": "organization",
+        "description": "qwerty",
+        "tech": [
+            "flask"
+        ],
+        "link": "https://chatgpt.com/c/68617b71-2e90-800c-bf29-b40bd8fb4d41"
+    }
 ]

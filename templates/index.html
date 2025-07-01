@@ -130,7 +130,11 @@
                             <span class="tech-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">{{ tech }}</span>
                             {% endfor %}
                         </div>
+                        {% if project.link %}
+                        <a href="{{ project.link }}" target="_blank" class="mt-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">View Project</a>
+                        {% else %}
                         <a href="#" class="mt-4 inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">View Project</a>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
@@ -183,7 +187,7 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <form id="contact-form" class="space-y-4">
+                    <form https://formsubmit.co/shreshtha391@gmail.com id="contact-form" class="space-y-4">
                         <div>
                             <label for="name" class="block text-gray-700 mb-2">Name</label>
                             <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>

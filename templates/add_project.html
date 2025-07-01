@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/add_project" method="POST">
+    <input name="title" placeholder="Project Title" value="{{ project.title if project }}">
+    <textarea name="description">{{ project.description if project }}</textarea>
+    <input name="tech" placeholder="Tech used (comma-separated)" value="{{ project.tech | join(',') if project }}">
+    <input name="link" placeholder="Project Link" value="{{ project.link if project }}">
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
+
+
